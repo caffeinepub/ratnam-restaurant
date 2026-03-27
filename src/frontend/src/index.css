@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* OKLCH tokens */
+    --background: 0.94 0.03 80;
+    --foreground: 0.18 0.01 250;
+    --card: 0.96 0.025 85;
+    --card-foreground: 0.18 0.01 250;
+    --popover: 0.97 0.02 85;
+    --popover-foreground: 0.18 0.01 250;
+    --primary: 0.63 0.15 52;
+    --primary-foreground: 0.98 0.01 85;
+    --secondary: 0.35 0.12 22;
+    --secondary-foreground: 0.97 0.02 85;
+    --muted: 0.9 0.03 80;
+    --muted-foreground: 0.48 0.04 80;
+    --accent: 0.72 0.12 70;
+    --accent-foreground: 0.18 0.01 250;
+    --destructive: 0.5 0.18 20;
+    --destructive-foreground: 0.98 0.01 85;
+    --border: 0.87 0.04 78;
+    --input: 0.87 0.04 78;
+    --ring: 0.63 0.15 52;
+    --radius: 0.75rem;
+    --dark: 0.18 0.01 250;
+    --gold: 0.72 0.12 70;
+    --maroon: 0.35 0.12 22;
+    --cream: 0.94 0.03 80;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+.font-serif {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+/* Glass utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px rgba(122, 30, 30, 0.08);
+}
+.glass-header {
+  background: rgba(31, 31, 31, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* Andhra kolam divider */
+.kolam-divider {
+  background-image: url("/assets/generated/andhra-kolam-pattern-transparent.dim_1200x200.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: center;
+  height: 60px;
+  opacity: 0.3;
+  pointer-events: none;
+}
